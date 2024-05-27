@@ -30,7 +30,7 @@ const Post = ({ post }) => {
         ))}
 
         
-        <center style={{color:"black" , margin:" 0px auto" , fontWeight:"bold"}}>Reacted by {post.reaction} people </center>
+        <center style={{color:"black" , margin:" 0px auto" , fontWeight:"bold"}}>Reacted by {post.reactions.likes} people </center>
       </div>
     </div>
   );
