@@ -44,13 +44,13 @@ const Sidebar = ({selectedTab , setSelectedTab}) => {
             aria-expanded="false"
           >
             <img
-              src="https://github.com/mdo.png"
+              src="https://avatars.githubusercontent.com/u/99659309?v=4"
               alt=""
               width="32"
               height="32"
               className="rounded-circle me-2"
             />
-            <strong>mdo</strong>
+            <strong>Nishi</strong>
           </a>
           <ul className="dropdown-menu text-small shadow">
             <li>

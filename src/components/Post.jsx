@@ -4,6 +4,8 @@ import "../App.css";
 import { AiFillDelete } from "react-icons/ai";
 import {PostList} from "../store/postliststore";
 
+
+
 const Post = ({ post }) => {
 
   const {deletePost} = useContext(PostList);
@@ -26,6 +28,8 @@ const Post = ({ post }) => {
         {post.tags.map((tag) => (
           <span class="badge text-bg-primary">{tag}</span>
         ))}
+
+        
         <center style={{color:"black" , margin:" 0px auto" , fontWeight:"bold"}}>Reacted by {post.reaction} people </center>
       </div>
     </div>

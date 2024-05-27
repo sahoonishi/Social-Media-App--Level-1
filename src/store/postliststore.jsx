@@ -13,12 +13,28 @@ const postListReducer = (currPostList, action) => {
   if(action.type==="Delete"){
     newPostList = currPostList.filter((post) => post.id !== action.payload.postId);
   }
+  else if(action.type === "Add"){
+    newPostList = [action.payload , ...currPostList]
+  }
   return newPostList;
 };
 
 const PostListProvider = ({ children }) => {
   const [postList, dispatchPostList] = useReducer(postListReducer, DEFAULT);
-  const addPost = () => {};
+  const addPost = (userid , title , body , reactions , tags) => {
+    dispatchPostList({
+      type:"Add",
+      payload:{
+        id: Date.now(),
+        title:title,
+        body:body,
+        reaction:reactions,
+        userid:userid,
+        tags:tags,
+
+      }
+    })
+  };
   const deletePost = (postId) => {
     dispatchPostList({
       type:"Delete",
@@ -37,19 +53,19 @@ const PostListProvider = ({ children }) => {
 
 const DEFAULT = [{
   id:"1",
-  title:"I lOve YOu",
-  body:"143 I love u",
-  reaction:0,
+  title:"React social app",
+  body:"Thanks for seeing my project ,  give it a star ☺️",
+  reaction:10,
   userid:"figma",
-  tags:["love" , "dhoka"]
+  tags:["Project" , "React" , "SocialApp"]
 },
 {
   id:"2",
-  title:"I dont know YOu",
-  body:"143 I fuck u",
-  reaction:1110,
+  title:"Please check other repos as well",
+  body:"Also follow me for more awesome Projects",
+  reaction:99,
   userid:"sigma",
-  tags:["paisa" , "paisaa"]
+  tags:["Follow👣" , "Like👍" , "star⭐"]
 }
 ];
 
