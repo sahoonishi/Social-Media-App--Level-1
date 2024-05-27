@@ -3,13 +3,17 @@ import { createContext, useReducer } from "react";
 export const PostList = createContext({
   postList: [],
   addPost: () => {},
-  deletePost: (postId) => {
-
+  deletePost: () => {
+    
   },
 });
 
 const postListReducer = (currPostList, action) => {
-  return currPostList;
+  let newPostList = currPostList;
+  if(action.type==="Delete"){
+    newPostList = currPostList.filter((post) => post.id !== action.payload.postId);
+  }
+  return newPostList;
 };
 
 const PostListProvider = ({ children }) => {

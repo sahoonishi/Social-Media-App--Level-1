@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import { AiFillDelete } from "react-icons/ai";
+import {PostList} from "../store/postliststore";
 
 const Post = ({ post }) => {
 
