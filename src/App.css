@@ -1,0 +1,21 @@
+
+.content{
+  width:100%;
+}
+.sidebar{
+  min-height:500px;
+}
+.app-container{
+  display: flex;
+}
+.cardd{
+  margin: 29px 69px;
+  border:3px solid black;
+  
+}
+.carddd{
+  border:2px solid black;
+  box-shadow: 9px 9px 3px rgb(77, 79, 75);
+  border-radius: 12px;
+  background-color: rgb(234, 234, 111);
+}
