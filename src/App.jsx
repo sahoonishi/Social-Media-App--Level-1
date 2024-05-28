@@ -3,10 +3,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 
-import "./App.css";
+
 import CreatePost from "./components/CreatePost";
 import PostList from "./components/PostList";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import PostListProvider from "./store/postliststore";
 
 const App = () => {
