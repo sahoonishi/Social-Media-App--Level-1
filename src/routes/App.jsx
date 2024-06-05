@@ -9,7 +9,6 @@ import PostList from "./components/PostList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import PostListProvider from "./store/postliststore";
-import { Outlet } from "react-router-dom";
 
 const App = () => {
   const [selectedTab, setSelectedTab] = useState("Home");
@@ -28,7 +27,6 @@ const App = () => {
           ) : (
             <CreatePost></CreatePost>
           )} */}
-          <Outlet/>
 
           <Footer></Footer>
         </div>
