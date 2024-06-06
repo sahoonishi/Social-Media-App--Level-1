@@ -1,9 +1,11 @@
 import React, { useContext, useRef } from "react";
 import {PostList} from "../store/postliststore"
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
 
-  const {addPost} = useContext(PostList); // this PostList is the context object we have made in posyliststore
+  const {addPost} = useContext(PostList); // this PostList is the context object we have made in postliststore
+  const navigate = useNavigate();
 
   const userid_element= useRef();
   const title_element= useRef();
@@ -27,6 +29,7 @@ const CreatePost = () => {
     tags_element.current.value="";
 
     addPost(userid , title , body , reactions , tags);
+    navigate("/Home");
   }
 
   return (

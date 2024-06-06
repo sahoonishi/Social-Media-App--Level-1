@@ -36,11 +36,11 @@ const Post = ({ post }) => {
           <span key={tag} class="badge text-bg-primary">{tag}</span>
         ))}
 
-        {/* <center
+        <center
           style={{ color: "black", margin: " 0px auto", fontWeight: "bold" }}
         >
           Reacted by {post.reactions.likes || post.reactions} people{" "}
-        </center> */}
+        </center>
       </div>
     </div>
   );

@@ -16,9 +16,9 @@ body{
   
 }
 .carddd{
-  border:2px solid black;
+  border:1px black;
   box-shadow: 9px 9px 3px rgb(77, 79, 75);
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: rgb(234, 234, 111);
 }
 .form{

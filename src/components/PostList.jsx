@@ -9,16 +9,16 @@ const PostList = () => {
 
   const [fetching , setfetching] = useState(false);
 
-  useEffect(()=>{
-    setfetching(true);
+  // useEffect(()=>{
+  //   setfetching(true);
     
-    fetch("https://dummyjson.com/posts")
-    .then((response) => response.json())
-    .then(data => {
-      addInitialPosts(data.posts);
-      setfetching(false);
-    });
-  },[])
+  //   fetch("https://dummyjson.com/posts")
+  //   .then((response) => response.json())
+  //   .then(data => {
+  //     addInitialPosts(data.posts);
+  //     setfetching(false);
+  //   });
+  // },[])
 
 
 
